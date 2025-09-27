@@ -1,24 +1,18 @@
 # AED2 - Trabalho 1 - Grupo 3
 
-## Alunos
+# Alunos
 
 - João Luiz Schiavini Filho
 - Felippe Carballo Leal
 - Matheus Gonçalves do Nascimento Bandeira
 
-## Algoritmo Recursivo: Multiplicação de Karatsuba
+# Algoritmo Recursivo: Multiplicação de Karatsuba
 
 O algoritmo consiste em simplificar a multiplicação de números grandes.
 
-Nossa implementação foi feita em Java, no arquivo ``karatsuba.java``. Para executar, basta rodar o seguinte comando, do ``OpenJDK 25``
+## Funcionamento
 
-```bash
-java karatsuba.java <A> <B>
-```
-
-Substituindo ``<A>`` e ``<B>`` pelos números.
-
-Funcionamento: dados 2 números $ a = 3044 $ e $ b = 4044 $, o algoritmo  consiste em realizar os seguintes passos:
+Dados 2 números $ a = 3044 $ e $ b = 4044 $, o algoritmo  consiste em realizar os seguintes passos:
 
 ```
 
@@ -66,12 +60,12 @@ Observação: Na implementação, as multiplicações dos passos 3 e 4 chamam
 o algoritmo de forma recursiva, e multiplicações entre números de até 3 
 dígitos são feitas diretamente.
 
-### Teorema Mestre
+## Teorema Mestre
 
 Considerando que os passos 1 e 2, e a multiplicação simples da observação 
 consomem, na implementação, n passos. Os passos 
 
-Complexidade: $ T(n) = 3T(n/2) + n $
+Complexidade: $$ T(n) = 3T(n/2) + n $$
 
 $$ T(n) = 3T(\frac{n}{2}) + n $$
 
@@ -79,9 +73,19 @@ $$ a = 3; b = 2; f(n) = n $$
 
 $$ f(n) \lt n^{log_b a} \rightarrow n \lt n^{log_2 3} $$
 
-Logo, a solução da recorrência é $ T(n) = \theta (n^{log_2 3}) $
+Logo, a solução da recorrência é $$ T(n) = \theta (n^{log_2 3}) $$
 
-### Execução
+## Execução
+
+Nossa implementação foi feita em Java, no arquivo ``karatsuba.java``. Para executar, basta rodar o seguinte comando, do ``OpenJDK 25``
+
+```bash
+java karatsuba.java <A> <B>
+```
+
+Substituindo ``<A>`` e ``<B>`` pelos números.
+
+### Exemplo de execução: 
 
 ```
 Karatsuba $ java karatsuba.java 3524365 55453655
