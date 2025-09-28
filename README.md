@@ -114,7 +114,7 @@ Tempo de execução do algoritmo (em nanossegundos)
 Início :  1759002518341913614
 Fim :     1759002518342237482
 ```
-[18:02, 28/09/2025] Matheus: # AED2 - Trabalho 1 (Grupo 4) - Problema do Troco
+# AED2 - Trabalho 1 (Grupo 4) - Problema do Troco
 
 Este documento detalha a implementação do "Problema de Troco de Moedas" (Coin Change Problem), desenvolvido como parte da avaliação da disciplina de Algoritmos e Estruturas de Dados II. A solução foi implementada em *Python* e demonstra duas abordagens distintas utilizando Programação Dinâmica: uma para contar o total de combinações e outra para listar cada uma delas.
 
