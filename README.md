@@ -125,18 +125,6 @@ Este documento detalha a implementação do "Problema de Troco de Moedas" (Coin 
 O Problema do Troco é um desafio clássico da ciência da computação. O objetivo é, dado um conjunto de moedas e um valor de troco, determinar o número total de combinações distintas de moedas que somam exatamente esse valor.
 
 Nossa implementação vai além e resolve duas questões:
-1.  *Contagem:* Quantas combinações diferente…
-[18:06, 28/09/2025] Matheus: # AED2 - Trabalho 1 (Grupo 4) - Problema do Troco
-
-Este documento detalha a implementação do "Problema de Troco de Moedas" (Coin Change Problem), desenvolvido como parte da avaliação da disciplina de Algoritmos e Estruturas de Dados II. A solução foi implementada em *Python* e demonstra duas abordagens distintas utilizando Programação Dinâmica: uma para contar o total de combinações e outra para listar cada uma delas.
-
----
-
-### O Problema
-
-O Problema do Troco é um desafio clássico da ciência da computação. O objetivo é, dado um conjunto de moedas e um valor de troco, determinar o número total de combinações distintas de moedas que somam exatamente esse valor.
-
-Nossa implementação vai além e resolve duas questões:
 1.  *Contagem:* Quantas combinações diferentes existem?
 2.  *Listagem:* Quais são todas essas combinações?
 
