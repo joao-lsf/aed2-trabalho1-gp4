@@ -1,11 +1,5 @@
 # AED2 - Trabalho 1 - Grupo 3
 
-# Alunos
-
-- João Luiz Schiavini Filho
-- Felippe Carballo Leal
-- Matheus Gonçalves do Nascimento Bandeira
-
 # Algoritmo Recursivo: Multiplicação de Karatsuba
 
 O algoritmo consiste em simplificar a multiplicação de números grandes.
@@ -113,7 +107,16 @@ b = 4044
 Tempo de execução do algoritmo (em nanossegundos)
 Início :  1759002518341913614
 Fim :     1759002518342237482
+
 ```
+
+# Autores
+
+- João Luiz Schiavini Filho
+- Felippe Carballo Leal
+- Matheus Gonçalves do Nascimento Bandeira
+
+
 # AED2 - Trabalho 1 (Grupo 4) - Problema do Troco
 
 Este documento detalha a implementação do "Problema de Troco de Moedas" (Coin Change Problem), desenvolvido como parte da avaliação da disciplina de Algoritmos e Estruturas de Dados II. A solução foi implementada em *Python* e demonstra duas abordagens distintas utilizando Programação Dinâmica: uma para contar o total de combinações e outra para listar cada uma delas.
