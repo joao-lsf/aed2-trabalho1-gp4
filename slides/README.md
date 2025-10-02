@@ -3,7 +3,7 @@
 
 Aqui residem os slides da apresentação do trabalho
 
-Observação: o formato ODP é destinado para uso com LibreOffice. Utilize o PDF como último recurso.
+Observação: o formato ODP é destinado para uso com LibreOffice, que está instalado na maioria das máquinas do IME/UERJ. Utilize o PDF como último recurso.
 
 Foram gerados slides em 16:9 para telas maiores, e em 4:3 com letra maior para telas quadradas ou de baixa qualidade.
 
