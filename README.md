@@ -2,11 +2,11 @@
 
 # Algoritmo Recursivo: Multiplicação de Karatsuba
 
-O algoritmo consiste em simplificar a multiplicação de números grandes.
+O algoritmo consiste em simplificar a multiplicação de números grandes que levariam muito tempo para multiplicar por algoritmos convencionais.
 
 ## Funcionamento
 
-Dados 2 números $ a = 3044 $ e $ b = 4044 $, o algoritmo  consiste em realizar os seguintes passos:
+Dados 2 números, por exemplo, a = 3044  e b = 4044, o algoritmo  consiste em realizar os seguintes passos:
 
 ```
 
@@ -51,23 +51,29 @@ ab =    c          * 10^(m2)
 ```
 
 Observação: Na implementação, as multiplicações dos passos 3 e 4 chamam 
-o algoritmo de forma recursiva, e multiplicações entre números de até 3 
-dígitos são feitas diretamente.
+o algoritmo novamente, de forma recursiva, e multiplicações entre números 
+de até 3 dígitos são feitas diretamente. Todos os outros passos gastam O(1).
 
 ## Teorema Mestre
 
 Considerando que os passos 1 e 2, e a multiplicação simples da observação 
 consomem, na implementação, n passos. Os passos 
 
-Complexidade: $$ T(n) = 3T(n/2) + n $$
+Complexidade: 
 
 $$ T(n) = 3T(\frac{n}{2}) + n $$
 
 $$ a = 3; b = 2; f(n) = n $$
 
-$$ f(n) \lt n^{log_b a} \rightarrow n \lt n^{log_2 3} $$
+$$ \log_2 2 = 1 ; \log_2 4 = 2 $$
 
-Logo, a solução da recorrência é $$ T(n) = \theta (n^{log_2 3}) $$
+$$ \log_2 2 \lt \log_2 3 ; $$
+
+$$ f(n) \lt n^{\log_b a} \rightarrow n \lt n^{\log_2 3} $$
+
+Logo, a solução da recorrência é 
+
+$$ T(n) = \theta (n^{\log_2 3}) $$
 
 ## Execução
 
@@ -77,7 +83,7 @@ Nossa implementação foi feita em Java, no arquivo ``karatsuba.java``. Para exe
 java karatsuba.java <A> <B>
 ```
 
-Substituindo ``<A>`` e ``<B>`` pelos números.
+Substituindo ``<A>`` e ``<B>`` pelos números a serem multiplicados.
 
 ### Exemplo de execução: 
 
@@ -112,21 +118,15 @@ Fim :     1759002518342237482
 
 # Algoritmo Dinâmico: Problema do Troco
 
-Este documento detalha a implementação do "Problema de Troco de Moedas" (Coin Change Problem), desenvolvido como parte da avaliação da disciplina de Algoritmos e Estruturas de Dados II. A solução foi implementada em *Python* e demonstra duas abordagens distintas utilizando Programação Dinâmica: uma para contar o total de combinações e outra para listar cada uma delas.
-
-
-## O Problema
-
 O Problema do Troco é um desafio clássico da ciência da computação. O objetivo é, dado um conjunto de moedas e um valor de troco, determinar o número total de combinações distintas de moedas que somam exatamente esse valor.
+
+## Implementação
 
 Nossa implementação vai além e resolve duas questões:
 1.  *Contagem:* Quantas combinações diferentes existem?
 2.  *Listagem:* Quais são todas essas combinações?
 
-
-## A Solução: Programação Dinâmica
-
-Para resolver o problema de forma eficiente, foi utilizada a abordagem de *Programação Dinâmica*. A seguir, detalhamos como cada função do código aplica esta técnica.
+Para resolver o problema de forma eficiente, foi utilizada a abordagem da *Programação Dinâmica*. A seguir, detalhamos como cada função do código aplica esta técnica.
 
 ### 1. Contagem das Combinações (contar_maneiras_de_fazer_troco)
 
@@ -160,9 +160,9 @@ Onde V é o valor do troco e M é o número de moedas disponíveis.
 
 ## Implementação
 
-O algoritmo foi implementado na linguagem *Python 3*.
+O algoritmo foi implementado na linguagem *Python*.
 
-* *Arquivo Principal:* coin_change.py (sugestão de nome)
+* *Arquivo Principal:* ``Troco.py``
 * *Bibliotecas Utilizadas:*
     * time: Para medir e comparar o tempo de execução das duas funções.
     * typing: Para adicionar dicas de tipo e melhorar a legibilidade do código.
@@ -174,21 +174,24 @@ O script foi projetado para ser executado diretamente, sem a necessidade de argu
 
 1.  *Configure a Entrada:*
     Abra o arquivo Python e altere os valores das variáveis moedas e troco conforme desejado.
-    python
-    ### Input de dados
+        
+    ```python
     moedas = [1, 5, 10, 25, 50, 100]
     troco = 26
+    ```
     
 
-2.  *Execute o script:*
+3.  *Execute o script:*
     Abra um terminal na pasta do projeto e execute o seguinte comando:
-    bash
-    python coin_change.py
+
+    ```
+    python Troco.py
+    ```
     
 
 ### Saída de Exemplo
 
-A execução do script com os valores padrão (troco = 26, moedas = [1, 5, 10, 25, 50, 100]) produzirá a seguinte saída:
+A execução do script com os valores padrão ( ``troco = 26``, ``moedas = [1, 5, 10, 25, 50, 100]`` ) produzirá a seguinte saída:
 
 ```
 === Problema: Combinações de Moedas usando Programação Dinâmica ===
