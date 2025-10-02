@@ -1,4 +1,4 @@
-# AED2 - Trabalho 1 - Grupo 3
+# AED2 - Trabalho 1 - Grupo 4
 
 # Algoritmo Recursivo: Multiplicação de Karatsuba
 
@@ -110,12 +110,12 @@ Fim :     1759002518342237482
 
 ```
 
-# AED2 - Trabalho 1 - Grupo 4 - Problema do Troco
+# Algoritmo Dinâmico: Problema do Troco
 
 Este documento detalha a implementação do "Problema de Troco de Moedas" (Coin Change Problem), desenvolvido como parte da avaliação da disciplina de Algoritmos e Estruturas de Dados II. A solução foi implementada em *Python* e demonstra duas abordagens distintas utilizando Programação Dinâmica: uma para contar o total de combinações e outra para listar cada uma delas.
 
 
-### O Problema
+## O Problema
 
 O Problema do Troco é um desafio clássico da ciência da computação. O objetivo é, dado um conjunto de moedas e um valor de troco, determinar o número total de combinações distintas de moedas que somam exatamente esse valor.
 
@@ -124,18 +124,18 @@ Nossa implementação vai além e resolve duas questões:
 2.  *Listagem:* Quais são todas essas combinações?
 
 
-### A Solução: Programação Dinâmica
+## A Solução: Programação Dinâmica
 
 Para resolver o problema de forma eficiente, foi utilizada a abordagem de *Programação Dinâmica*. A seguir, detalhamos como cada função do código aplica esta técnica.
 
-#### 1. Contagem das Combinações (contar_maneiras_de_fazer_troco)
+### 1. Contagem das Combinações (contar_maneiras_de_fazer_troco)
 
 Esta função calcula apenas o número total de combinações.
 * *Lógica:* A lista formas_por_valor é usada como o array da programação dinâmica. Com tamanho V + 1 (onde V é o troco), a posição formas_por_valor[i] armazena o número de maneiras de formar o valor i.
 * *Execução:* O algoritmo itera por cada moeda e, para cada uma, atualiza a lista formas_por_valor, somando as novas combinações possíveis. Ao final, formas_por_valor[troco] contém a resposta total.
 * *Performance:* Esta abordagem é extremamente rápida e eficiente em memória, pois armazena apenas contagens.
 
-#### 2. Listagem de Todas as Combinações (listar_combinacoes)
+### 2. Listagem de Todas as Combinações (listar_combinacoes)
 
 Esta função gera a lista completa de todas as combinações possíveis.
 * *Lógica:* A estrutura de programação dinâmica aqui é a lista combinacoes_possiveis. Em vez de armazenar contagens, combinacoes_possiveis[i] armazena uma lista contendo todas as combinações que somam o valor i.
@@ -143,7 +143,7 @@ Esta função gera a lista completa de todas as combinações possíveis.
 * *Performance:* Embora poderosa, esta função consome significativamente mais tempo e memória, pois precisa criar e armazenar todas as listas de combinações individuais.
 
 
-### Complexidade
+## Complexidade
 
 A complexidade varia significativamente entre as duas funções implementadas.
 
@@ -158,7 +158,7 @@ A complexidade varia significativamente entre as duas funções implementadas.
 Onde V é o valor do troco e M é o número de moedas disponíveis.
 
 
-### Implementação
+## Implementação
 
 O algoritmo foi implementado na linguagem *Python 3*.
 
@@ -168,14 +168,14 @@ O algoritmo foi implementado na linguagem *Python 3*.
     * typing: Para adicionar dicas de tipo e melhorar a legibilidade do código.
 
 
-### Como Executar
+## Como Executar
 
 O script foi projetado para ser executado diretamente, sem a necessidade de argumentos de linha de comando. Os valores de entrada são definidos no próprio código.
 
 1.  *Configure a Entrada:*
     Abra o arquivo Python e altere os valores das variáveis moedas e troco conforme desejado.
     python
-    # Input de dados
+    ### Input de dados
     moedas = [1, 5, 10, 25, 50, 100]
     troco = 26
     
@@ -186,11 +186,11 @@ O script foi projetado para ser executado diretamente, sem a necessidade de argu
     python coin_change.py
     
 
-#### Saída de Exemplo
+### Saída de Exemplo
 
 A execução do script com os valores padrão (troco = 26, moedas = [1, 5, 10, 25, 50, 100]) produzirá a seguinte saída:
 
-
+```
 === Problema: Combinações de Moedas usando Programação Dinâmica ===
 Moedas disponíveis: [1, 5, 10, 25, 50, 100]
 troco: 26
@@ -215,11 +215,12 @@ Total de combinações: 13
 Tempo para listagem: 0.123 milissegundos
 Tempo para contagem: 0.045 milissegundos
 Tempo total: 0.168 milissegundos
+```
 
 (Nota: Os tempos de execução podem variar ligeiramente dependendo da máquina.)
 
 
-### Autores
+# Autores
 
 * *João Luiz Schiavini Filho*
 * *Felippe Carballo Leal*
